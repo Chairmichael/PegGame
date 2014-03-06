@@ -14,15 +14,17 @@ import javax.swing.JComponent;
  */
 public class BoardComponent extends JComponent
 {  
-   final private Color GREEN = Color.GREEN;
-   final private Color RED = Color.RED;
-   final private Color BLUE = Color.BLUE;
-   final private Color YELLOW = Color.YELLOW;
-    
-   public void paintComponent(Graphics g)
-   {  
-      Graphics2D g2 = (Graphics2D) g;
+    final private Color GREEN = Color.GREEN;
+    final private Color RED = Color.RED;
+    final private Color BLUE = Color.BLUE;
+    final private Color YELLOW = Color.YELLOW;
 
-      
-   }
+    public void paintComponent(Graphics g)
+    {  
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(2));
+        
+        Board board = new Board();
+        board.draw(g2);
+    }
 }
