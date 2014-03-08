@@ -11,12 +11,12 @@ import java.awt.geom.Point2D;
 import javax.swing.JComponent;
 
 /**
- * The peg component.
+ * The normal peg component.
  * 
  * @author Jefferson Henry
  * @version 3/4/2014
  */
-public class PegComponent extends JComponent
+public class PegNormal extends JComponent
 {  
     final private Color GREEN = Color.GREEN;
     final private Color RED = Color.RED;
@@ -25,24 +25,14 @@ public class PegComponent extends JComponent
     
     final private double DIAMETER = 75;
     
-    private Ellipse2D.Double cirlceSmall;
-    private Ellipse2D.Double circleLarge;
+    private Ellipse2D.Double e;
 
     public void paintComponent(Graphics g)
     {  
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(2));
         
-        cirlceSmall = new Ellipse2D.Double(75, 75, DIAMETER, DIAMETER);
-        g2.draw(cirlceSmall);
-    }
-    
-    public void increaseWidth(Graphics g)
-    {
-        Graphics2D g2 = (Graphics2D) g;
-        g2.setStroke(new BasicStroke(5));
-        
-        circleLarge = new Ellipse2D.Double(75, 75, DIAMETER, DIAMETER);
-        g2.draw(circleLarge);
+        e = new Ellipse2D.Double(75, 75, DIAMETER, DIAMETER);
+        g2.draw(e);
     }
 }

@@ -1,12 +1,14 @@
 package Test_Cases;
 
 import javax.swing.JFrame;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseEvent;
 
 /**
  * A class that has the main method for 
  * testing the mechanics of a single peg.
  */
-public class S_Viewer
+public class S_Viewer implements MouseListener
 {
     public static void main()
     {
@@ -19,9 +21,34 @@ public class S_Viewer
         frame.setTitle("A Single Peg");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        PegComponent component = new PegComponent();
-        frame.add(component);
+        PegNormal pegNorm = new PegNormal();
+        frame.add(pegNorm);
 
         frame.setVisible(true);
+    }
+
+    public void mousePressed(MouseEvent e)
+    {
+        
+    }
+
+    public void mouseReleased(MouseEvent e) 
+    {
+        
+    }
+
+    public void mouseEntered(MouseEvent e) 
+    {
+        
+    }
+
+    public void mouseExited(MouseEvent e) 
+    {
+        
+    }
+
+    public void mouseClicked(MouseEvent e) 
+    {
+        
     }
 }
