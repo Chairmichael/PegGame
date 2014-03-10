@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=Board()
-comment0.text=\r\n\ Constructs\ a\ board\ with\ a\ scale\ of\ 1.\r\n
-comment1.params=g2
-comment1.target=void\ draw(java.awt.Graphics2D)
-comment1.text=\r\n\ Draws\ the\ board.\r\n\ @param\ g2\ The\ current\ graphics\ state\r\n
-numComments=2
