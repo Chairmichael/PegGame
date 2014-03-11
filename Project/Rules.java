@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.lang.Integer;
+import java.lang.Math;
 
 /**
  * Contains an ArrayList of locations and controls whether a move is valid
@@ -24,6 +25,6 @@ public class Rules
             
         }
         
-        return true;
+        return true;  
     }
 }
