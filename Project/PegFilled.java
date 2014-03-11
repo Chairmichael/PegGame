@@ -1,33 +1,52 @@
 
+import java.lang.Exception;
+import java.lang.IllegalArgumentException;
+
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Color;
+import java.awt.geom.Ellipse2D;
+
 /**
- * Write a description of class PegFilled here.
+ * A PegFilled.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jefferson Henry
+ * @version //2014
  */
-public class PegFilled
+public class PegFilled extends Peg
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
-     * Constructor for objects of class PegFilled
-     */
-    public PegFilled()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
+     * Constructs a peg with a mouse over it 
+     * with a random <code>Color</code>.
+     * See <code>Peg</code>.
      * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * @param loc a <code>Location</code> object.
      */
-    public int sampleMethod(int y)
+    public PegFilled(double wrp, Location loc)
     {
-        // put your code here
-        return x + y;
+        super(wrp, loc);
+    }
+    
+    /**
+     * Constructs a <code>Peg</code> that is smaller than the
+     * normal peg. See <code>Peg</code>.
+     * 
+     * @param loc a <code>Location</code> object.
+     * @param clr a <code>Color</code> object.
+     * The color must be RED, BLUE, GREEN, or ORANGE.
+     */
+    public PegFilled(double wrp, Location loc, Color clr)
+    {
+       super(wrp, loc, clr); 
+    }
+    
+    /**
+     * Paints an Ellipse that is smaller than normal
+     * 
+     * @param g the current <code>Graphics</code> object.
+     */
+    public void paintComponent(Graphics g)
+    {
+        
     }
 }

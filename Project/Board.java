@@ -18,8 +18,7 @@ public class Board
     // private int s;
     
     private final int MARGIN_0 = 50;
-    private final int MARGIN_1 = 200;
-    private final int DIAMETER = 30;
+    private final int DIAMETER = 50;
     // The multiplier for the Ellipse coorinates
     private final int MULT = 60;
     
@@ -44,6 +43,7 @@ public class Board
     
     /**
      * Draws the board.
+     * 
      * @param g2 The current graphics state
      */
     public void draw(Graphics2D g2)

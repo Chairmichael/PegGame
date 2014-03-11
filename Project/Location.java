@@ -8,10 +8,21 @@ import java.awt.Point;
  */
 public class Location extends Point
 {
-    boolean containsPeg;
+    private boolean containsPeg;
     
     /**
-     * Constucts a Location with the <code>Point</code> constructor and a boolean.
+     * Constucts a Location with the <code>Point</code> constructor and a boolean 
+     * that determines if the <code>Point</code> has a <code>Peg</code>. <br />
+     * The coordinates represent the a Peg's position on the board. <br />
+     * For the example below, X's are pegs and O's are empty places: <br />
+     * <code>
+     * &nbsp;&nbsp;&nbsp;X        <br />
+     * &nbsp;&nbsp;X&nbsp;X       <br />
+     * &nbsp;X&nbsp;O&nbsp;X      <br />
+     * X&nbsp;X&nbsp;X&nbsp;X     <br />
+     * </code>
+     * The 'O' would have the <code>Location</code> fields of: 
+     * <code>this.x = 2</code>, <code>this.y = 3</code>, <code>conatinsPeg = false</code>;
      * 
      * @param x The x coordinate
      * @param y The y coordinate
