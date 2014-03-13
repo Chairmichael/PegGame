@@ -7,11 +7,13 @@ import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Graphics2D;
+import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 import java.awt.Color;
+import java.awt.BasicStroke;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,23 +22,28 @@ import javax.swing.JComponent;
 import javax.swing.SwingConstants;
 
 /**
- * A Ellipse_Tester.
+ * A Circle.
  * 
  * @author Jefferson Henry
  * @version //2014
  */
-public class Ellipse_Tester
+public class Circle extends JComponent
 {
-    public static void main()
+    private int x;
+    private int y;
+    
+    public Circle(int x, int y)
     {
-        JFrame frame = new JFrame();
+        this.x = x;
+        this.y = y;
+    }
+    
+    public void paintComponent(Graphics g)
+    {  
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(2));
         
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(700, 200);
-        frame.setTitle("Some Pegs");
-        frame.setVisible(true);
-        
-        JComponent peg1 = new CircleBold(50, 50);
-        frame.add(peg1);
+        Ellipse2D.Double e = new Ellipse2D.Double(x, x, 50, 50);
+        g2.draw(e);
     }
 }

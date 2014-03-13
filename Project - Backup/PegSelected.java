@@ -8,12 +8,12 @@ import java.awt.Color;
 import java.awt.geom.Ellipse2D;
 
 /**
- * A PegFilled.
+ * A PegSelected.
  * 
  * @author Jefferson Henry
- * @version //2014
+ * @version 3/10/2014
  */
-public class PegFilled extends Peg
+public class PegSelected extends Peg
 {
     /**
      * Constructs a peg with a mouse over it 
@@ -22,7 +22,7 @@ public class PegFilled extends Peg
      * 
      * @param loc a <code>Location</code> object.
      */
-    public PegFilled(double wrp, Location loc)
+    public PegSelected(double wrp, Location loc)
     {
         super(wrp, loc);
     }
@@ -35,13 +35,13 @@ public class PegFilled extends Peg
      * @param clr a <code>Color</code> object.
      * The color must be RED, BLUE, GREEN, or ORANGE.
      */
-    public PegFilled(double wrp, Location loc, Color clr)
+    public PegSelected(double wrp, Location loc, Color clr)
     {
        super(wrp, loc, clr); 
     }
     
     /**
-     * Paints an Ellipse that is smaller than normal
+     * Paints an Ellipse that was clicked by the mouse.
      * 
      * @param g the current <code>Graphics</code> object.
      */
