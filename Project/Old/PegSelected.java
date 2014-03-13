@@ -1,3 +1,5 @@
+package Old;
+
 
 import java.lang.Exception;
 import java.lang.IllegalArgumentException;
@@ -8,12 +10,12 @@ import java.awt.Color;
 import java.awt.geom.Ellipse2D;
 
 /**
- * A peg that has a mouse over it.
+ * A PegSelected.
  * 
  * @author Jefferson Henry
- * @version 3/8/2014
+ * @version 3/10/2014
  */
-public class PegMoused extends Peg
+public class PegSelected extends Peg
 {
     /**
      * Constructs a peg with a mouse over it 
@@ -22,7 +24,7 @@ public class PegMoused extends Peg
      * 
      * @param loc a <code>Location</code> object.
      */
-    public PegMoused(double wrp, Location loc)
+    public PegSelected(double wrp, Location loc)
     {
         super(wrp, loc);
     }
@@ -33,15 +35,15 @@ public class PegMoused extends Peg
      * 
      * @param loc a <code>Location</code> object.
      * @param clr a <code>Color</code> object.
-     * The color must be RED, BLUE, GREEN, or Orange.
+     * The color must be RED, BLUE, GREEN, or ORANGE.
      */
-    public PegMoused(double wrp, Location loc, Color clr)
+    public PegSelected(double wrp, Location loc, Color clr)
     {
        super(wrp, loc, clr); 
     }
     
     /**
-     * Paints an Ellipse that is smaller than normal
+     * Paints an Ellipse that was clicked by the mouse.
      * 
      * @param g the current <code>Graphics</code> object.
      */
