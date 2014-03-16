@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=G_Viewer
 dependency1.to=BoardFrame
 dependency1.type=UsesDependency
@@ -20,28 +21,31 @@ dependency6.type=UsesDependency
 dependency7.from=Rules
 dependency7.to=Location
 dependency7.type=UsesDependency
+=======
+>>>>>>> origin/v2
 objectbench.height=76
 objectbench.width=1900
 package.editor.height=883
 package.editor.width=1802
 package.editor.x=-8
 package.editor.y=-8
+<<<<<<< HEAD
 package.numDependencies=7
 package.numTargets=12
+=======
+package.numDependencies=0
+package.numTargets=4
+>>>>>>> origin/v2
 package.showExtends=true
 package.showUses=true
 project.charset=windows-1252
-target1.editor.height=700
-target1.editor.width=900
-target1.editor.x=32
-target1.editor.y=12
 target1.height=50
-target1.name=G_Viewer
-target1.naviview.expanded=false
+target1.name=Resetable
 target1.showInterface=false
-target1.type=ClassTarget
+target1.type=InterfaceTarget
 target1.typeParameters=
 target1.width=80
+<<<<<<< HEAD
 target1.x=180
 target1.y=40
 target10.editor.height=1056
@@ -78,35 +82,37 @@ target12.typeParameters=
 target12.width=80
 target12.x=540
 target12.y=160
+=======
+target1.x=100
+target1.y=10
+>>>>>>> origin/v2
 target2.height=62
-target2.name=Test_Cases
+target2.name=Old
 target2.type=PackageTarget
-target2.width=90
-target2.x=70
+target2.width=80
+target2.x=800
 target2.y=10
+<<<<<<< HEAD
 target3.editor.height=1056
 target3.editor.width=1936
 target3.editor.x=-8
 target3.editor.y=-8
+=======
+>>>>>>> origin/v2
 target3.height=50
-target3.name=BoardFrame
-target3.naviview.expanded=false
+target3.name=Engine
 target3.showInterface=false
 target3.type=ClassTarget
 target3.typeParameters=
-target3.width=90
-target3.x=90
-target3.y=90
-target4.editor.height=700
-target4.editor.width=900
-target4.editor.x=32
-target4.editor.y=12
+target3.width=80
+target3.x=190
+target3.y=10
 target4.height=50
-target4.name=BoardComponent
-target4.naviview.expanded=false
+target4.name=MainFrame
 target4.showInterface=false
 target4.type=ClassTarget
 target4.typeParameters=
+<<<<<<< HEAD
 target4.width=80
 target4.x=180
 target4.y=140
@@ -169,3 +175,8 @@ target9.typeParameters=
 target9.width=80
 target9.x=760
 target9.y=210
+=======
+target4.width=90
+target4.x=280
+target4.y=10
+>>>>>>> origin/v2

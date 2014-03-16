@@ -1,3 +1,5 @@
+package Old;
+
 import java.awt.Point;
 
 /**
@@ -8,30 +10,30 @@ import java.awt.Point;
  */
 public class Location extends Point
 {
-    boolean containsPeg;
+    public boolean hasPeg;
     
     /**
-     * Constucts a Location with the <code>Point</code> constructor and a boolean.
+     * Constucts a Location with the <code>Point</code> constructor and a boolean 
+     * that determines if the <code>Point</code> has a <code>Peg</code>. <br />
+     * The coordinates represent the a Peg's position on the board. <br />
+     * For the example below, X's are pegs and O's are empty places: <br />
+     * <code>
+     * &nbsp;&nbsp;&nbsp;X        <br />
+     * &nbsp;&nbsp;X&nbsp;X       <br />
+     * &nbsp;X&nbsp;O&nbsp;X      <br />
+     * X&nbsp;X&nbsp;X&nbsp;X     <br />
+     * </code>
+     * The 'O' would have the <code>Location</code> fields of: 
+     * <code>this.x = 2</code>, <code>this.y = 3</code>, <code>hasPeg = false</code>;
      * 
      * @param x The x coordinate
      * @param y The y coordinate
-     * @param containsPeg If the <code>Point</code> has a peg
+     * @param hasPeg If the <code>Point</code> has a peg
      */
-    public Location(int x, int y, boolean containsPeg)
+    public Location(int x, int y, boolean hasPeg)
     {
         super(x, y);
-        this.containsPeg = containsPeg;
-    }
-    
-    /**
-     * Determines if the <code>Point</code> has a peg.
-     * 
-     * @return <code>true</code> if there is a <code>Peg</code> in the 
-     * <code>Point</code> and <code>false</code> if there ins't
-     */
-    public boolean hasPeg()
-    {
-        return containsPeg;
+        this.hasPeg = hasPeg;
     }
     
     /**
@@ -42,7 +44,7 @@ public class Location extends Point
      */
     public String toString()
     {
-        return "(" + this.x + "," + this.y + ") " + (containsPeg ? "Has peg." : "Not peg") + ".";
+        return "(" + this.x + "," + this.y + ") " + (hasPeg ? "Has peg." : "Not peg") + ".";
     }
     
     /**
@@ -53,7 +55,7 @@ public class Location extends Point
      */
     public boolean equals(Location loc)
     {
-        return (this.x == loc.x) && (this.y == loc.y) && (this.containsPeg == loc.containsPeg);
+        return (this.x == loc.x) && (this.y == loc.y) && (this.hasPeg == loc.hasPeg);
     }
     
     /**
