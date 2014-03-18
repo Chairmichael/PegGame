@@ -211,7 +211,7 @@ public class MainFrame extends JFrame implements Resetable
     
     /**
      * Checks to see if the coordinates are inside a peg
-     * using this algirthm <code>(x - center_x)^2 + (y - center_y)^2 < radius^2</code>.
+     * using this algorithm <code>(x - center_x)^2 + (y - center_y)^2 < radius^2</code>.
      * 
      * @param x the x coordinate to test with.
      * @param y the y coordinate to test with.

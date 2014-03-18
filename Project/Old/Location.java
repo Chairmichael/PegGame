@@ -1,4 +1,4 @@
-package old;
+package Old;
 
 import java.awt.Point;
 
@@ -39,8 +39,7 @@ public class Location extends Point
     /**
      * Creates and returns a representation of this object as a <code>String</code>.
      * 
-     * @return The <code>x</code> and <code>y</code> coordinate, 
-     * and if the <code>Point</code> contains a <code>Peg</code>
+     * @return The <code>x</code> and <code>y</code> coordinate, and if the <code>Point</code> contains a <code>Peg</code>
      */
     public String toString()
     {

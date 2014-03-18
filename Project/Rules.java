@@ -18,13 +18,14 @@ public class Rules
         
     }
     
-    public boolean isValid(Location from, Location to)
+    public boolean isValid(Old.Location from, Old.Location to)
     {
+        /*
         if (from.hasPeg())
         {
             
         }
-        
+        */
         return true;  
     }
 }
