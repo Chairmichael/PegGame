@@ -1,5 +1,4 @@
- 
-
+package core;
 
 /**
  * An interface that has a reset method.
