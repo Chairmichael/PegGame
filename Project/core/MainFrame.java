@@ -57,6 +57,8 @@ public class MainFrame extends JFrame implements Resetable
     private final int FRAME_WIDTH = 650;
     private final int FRAME_HEIGHT = 500;
     
+    private boolean gameHasEnded = false;
+    
     /**
      * Constructs the MainFrame.
      */
@@ -93,7 +95,7 @@ public class MainFrame extends JFrame implements Resetable
             public void mouseReleased(MouseEvent evt)
             {
                 System.out.println("Mouse clicked on board");
-                if (eng.isGameOver())
+                if (gameHasEnded)
                 {
                     System.out.println("    +-----------+");
                     System.out.println("    | GAME OVER |");
@@ -156,6 +158,7 @@ public class MainFrame extends JFrame implements Resetable
                 
                 if (eng.isGameOver())
                 {
+                    gameHasEnded = true;
                     System.out.println("    +-----------+");
                     System.out.println("    | GAME OVER |");
                     System.out.println("    +-----------+");

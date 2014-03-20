@@ -123,12 +123,25 @@ public class Engine implements Resetable
         for (int k = 0; k < array.length; k++)
         {
             if (array[k][0] < 0)
+            // If i position is below 0, then
                 array[k] = null;
             else if (array[k][1] < 0)
+            // If j position is below 0, then
                 array[k] = null;
             else if (array[k][0] > Constants.PIECES.length - 1)
+            // If i position is too large, then
                 array[k] = null;
-            else if (array[k][1] > Constants.PIECES[i].length - 1)
+            else if (array[k][0] == 0 && array[k][1] > 0) array[k] = null;
+            else if (array[k][0] == 1 && array[k][1] > 1) array[k] = null;
+            else if (array[k][0] == 2 && array[k][1] > 2) array[k] = null;
+            else if (array[k][0] == 3 && array[k][1] > 3) array[k] = null;
+            else if (array[k][0] == 4 && array[k][1] > 4) array[k] = null;
+            // If j position is too large, then
+            else if (pieces[array[k][0]][array[k][1]])
+            // If position has a peg, then
+                array[k] = null;
+            else if (!pieces[(i + array[k][0]) / 2][(i + array[k][1]) / 2])
+            // If there is not a peg to jump over, then
                 array[k] = null;
         }
     
@@ -145,6 +158,8 @@ public class Engine implements Resetable
                 result[l] = array[k];
                 l++;
             }
+        System.out.println("-   Valid positions   -");
+        for (int[] arr : result) System.out.println("-     i=" + arr[0] + ",j=" + arr[1]);
         return result;
     }
     
