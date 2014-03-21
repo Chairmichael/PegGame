@@ -92,17 +92,22 @@ public class MainFrame extends JFrame implements Resetable
         // Add listeners
         board.addMouseListener(new MouseAdapter() 
         {
+            /**
+             * Ran when the mouse is released on the board component.
+             * 
+             * @param evt the mouse event.
+             */
             public void mouseReleased(MouseEvent evt)
             {
                 System.out.println("Mouse clicked on board");
-                if (gameHasEnded)
+                /*if (gameHasEnded)
                 {
                     System.out.println("    +-----------+");
                     System.out.println("    | GAME OVER |");
                     System.out.println("    +-----------+");
                 }
                 else
-                {
+                {*/
                     int[] peg = checkBounds(evt.getX(), evt.getY(), eng.getBoard());
                     if (peg == null)
                     {
@@ -153,16 +158,16 @@ public class MainFrame extends JFrame implements Resetable
                             eng.selected[1] = -1;
                         }
                     }
-                }
+                //}
                 System.out.println();
-                
+                /*
                 if (eng.isGameOver())
                 {
                     gameHasEnded = true;
                     System.out.println("    +-----------+");
                     System.out.println("    | GAME OVER |");
                     System.out.println("    +-----------+");
-                }
+                }*/
             }
         });
         board.addMouseMotionListener(new MouseMotionAdapter() 
@@ -397,7 +402,10 @@ public class MainFrame extends JFrame implements Resetable
     }
     
     
-    public static void main()
+    /**
+     * The main method.
+     */
+    public static void main(String[] args)
     {
         new MainFrame();
     }
